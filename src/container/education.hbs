@@ -4,28 +4,30 @@
 --}}
 
 <div>
-    {{#with main}}
+	{{#with main}}
 		<main>
 			<section>
-				{{> title data=summary.title big=true}}
-				<div>
-					<p>
-						{{summary.text}}
-					</p>
-				</div>
+				{{> title data="My educations" big=true}}
+				<ul>
+					{{#each educations}}
+						<li>
+							{{name}}
+							{{#unless isEnd includeZero=true}} (ще в процесі) {{/unless}}
+						</li>
+					{{/each}}
+				</ul>
+				{{> title data="My certificates" big=false}}
+				<ul>
+					{{#each certificates}}
+						<li>
+							{{name}}
+							{{#if id includeZero=true}} ({{id}}) {{/if}}
+						</li>
+					{{/each}}
+				</ul>
 			</section>
-			{{#with experience}}
-				<section>
-					{{> title data=title}}
-					<div>
-						<p>
-							{{text}}
-						</p>
-					</div>
-				</section> 
-			{{/with}}
 		</main>
-    {{/with}}
+	{{/with}}
 </div>
 
 {{!-- 
