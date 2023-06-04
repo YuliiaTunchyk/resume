@@ -1,0 +1,168 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+	<div>
+		<h1>{{name}}</h1>
+  	</div>
+ 	 <div>
+    	<date>{{birthdate}}</date>
+  	</div>
+  	<div>
+		 <p>{{birthplace}}</p>
+  	</div>
+ 	 <div>
+		<date>{{deathdate}}</date>
+  	</div>
+  	<div>
+		 <p>{{deathplace}}</p>
+  	</div>
+  	<div>
+		<p>{{nationality}}</p>
+  	</div>
+  	<div>
+		<p>{{occupation}}</p>
+  	</div>
+  	<div>
+   		 <p>{{known_for}}</p>
+  	</div>
+  	<br>
+	<hr> 
+	<div>
+		{{> title data="Education:" big=true}}
+		<ul>
+			{{#each education}}
+			<li>
+			{{degree}}
+			</li>
+			<li>
+			{{field}}
+			</li>
+			<li>
+			{{institution}}
+			</li>
+			<li>
+			{{year}}
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	<br>
+	<hr>
+	<div>
+		{{> title data="Publications:" big=true}}
+		<ul>
+			{{#each notable_publications}}
+			<li>
+			{{title}}
+			</li>
+			<date>
+			{{year}}
+			</date>
+			<br>
+			<em>
+			{{publisher}}
+			</em>
+			{{/each}}
+		</ul>
+	</div>
+	<br>
+	<hr>
+	<div>
+		{{> title data="Partners:" big=true}}
+		<ul>
+			{{#each partners}}
+			<li>
+			{{name}}
+			</li>
+			<em>{{relationship}}</em>
+			<br>
+			<date>
+			{{years}}
+			</date>
+			{{/each}}
+		</ul>
+	</div>
+	<br>
+	<hr>
+	<div>
+		{{> title data="Awards:" big=true}}
+		<ul>
+			{{#each awards}}
+			<li>
+			{{title}}
+			</li>
+			<date>
+			{{year}}
+			</date>
+			<br>
+			<em>
+			{{description}}
+			</em>
+			{{/each}}
+		</ul>
+	</div>
+	<br>
+	<hr>
+	<div>
+		{{> title data="Influences:" big=true}}
+		<p>{{influences}}</p>
+		<br>
+		<hr>
+		{{> title data="Influenced:" big=true}}
+		<p>{{influenced}}</p>
+		<br>
+		<hr>
+		{{> title data="Quotes:" big=true}}
+		<q>{{quotes}}</q>
+	</div>
+	<br>
+	<hr>
+	<div>
+		{{> title data="Major discoveries:" big=true}}
+		<ul>
+			{{#each major_discoveries}}
+			<li>
+			{{title}}
+			</li>
+			<date>
+			{{year}}
+			</date>
+			<br>
+			<q>
+			{{description}}
+			</q>
+			{{/each}}
+		</ul>
+	</div>
+	<br>
+	<hr>
+	<div>
+		{{> title data="Contributions:" big=true}}
+		<ul>
+			{{#with contributions}}
+			<li>
+			{{title}}
+			</li>
+			<q>
+			{{description}}
+			</q>
+			<br>
+			<date>
+			{{year}}
+			</date>
+			<br>
+			<em>
+			{{field}}
+			</em>
+			{{/with}}
+		</ul>
+	</div>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
