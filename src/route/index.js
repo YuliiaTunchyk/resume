@@ -392,7 +392,7 @@ router.get('/web', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-    layout: 'basic',
+    layout: 'program',
 
     program: {
       excursion: {
@@ -475,7 +475,7 @@ router.get('/program', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-    layout: 'basic',
+    layout: 'bio',
 
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
@@ -571,7 +571,7 @@ router.get('/bio', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'basic',
+    layout: 'person',
 
     person: {
       name: 'Emma Johnson',
