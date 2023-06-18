@@ -47,7 +47,7 @@
       <br />
       <div class='row gx-2 gy-5'>
         {{#each cards}}
-          <div class='card col-5'>
+          <div class='card col-5 mx-2'>
             {{#with picture}}
               <img
                 src={{src}}
@@ -122,18 +122,16 @@
   <hr />
   <section>
     {{#with relaxion}}
-      <div class='row gx-3 gy-5'>
+      <div class='row g-4'>
         <div class='display-3'>{{title}}</div>
         {{#each cards}}
-          <div class='col-5'>
-            <div class='card text-bg-secondary'>
-              <div class='card-header'>{{header}}</div>
+          <div class='card col-5 text-bg-secondary mx-2'>
+            <div class='card-header'>{{header}}</div>
+            <br />
+            <div class='card-body'>
+              <h5 class='card-title'>{{title}}</h5>
               <br />
-              <div class='card-body'>
-                <h5 class='card-title'>{{title}}</h5>
-                <br />
-                <p class='card-text'>{{description}}</p>
-              </div>
+              <p class='card-text'>{{description}}</p>
             </div>
           </div>
         {{/each}}
