@@ -5,10 +5,10 @@
 
 <div>
 	{{#with main}}
-		<main>
-			<section>
+		<main class="mb-3">
+			<section class="mb-3">
 				{{> title data="All skills" big=true}}
-				<ul>
+				<ul class="pb-3">
 					{{#each skills}}
 						<li>
 							{{name}} 
@@ -20,7 +20,7 @@
 					{{/each}}
 				</ul>
 				{{> title data="My hobbies" big=false}}
-				<ol>
+				<ol class="pb-3">
 					{{#each hobbies}}
 						<li>
 							{{name}} 
