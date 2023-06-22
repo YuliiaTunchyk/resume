@@ -1,0 +1,105 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  <section>
+    <div>
+      <h1>{{name}}</h1>
+      <br />
+      <p>{{description}}</p>
+      {{#with history}}
+        <data>{{year}}</data>
+        <br />
+        <em>{{founder}}</em>
+      {{/with}}
+      <br />
+      <hr />
+      <h2>Types</h2>
+      <span class='badge text-bg-primary'>Number</span>
+      <span class='badge text-bg-secondary'>String</span>
+      <span class='badge text-bg-success'>Boolean</span>
+      <span class='badge text-bg-danger'>Null</span>
+      <span class='badge text-bg-warning'>Undefined</span>
+      <span class='badge text-bg-info'>Symbol</span>
+      <span class='badge text-bg-light'>Object</span>
+      <br />
+      <br />
+      <hr />
+      <h3>Syntax</h3>
+      <ul>{{#with syntax}}
+          <li><span
+              class='badge text-bg-primary'
+            >{{variables}}</span></li>
+          <li><span
+              class='badge text-bg-secondary'
+            >{{functions}}</span></li>
+          <li><span
+              class='badge text-bg-success'
+            >{{conditionals}}</span></li>
+          <li><span
+              class='badge text-bg-danger'
+            >{{loops}}</span></li>
+          <li><span
+              class='badge text-bg-warning'
+            >{{classes}}</span></li>
+        {{/with}}
+      </ul>
+      <br />
+      <hr />
+      <h4>Features</h4>
+      <span class='badge text-bg-primary'>First-class
+        functions</span>
+      <span class='badge text-bg-secondary'>Closures</span>
+      <span class='badge text-bg-success'>Dynamic typing</span>
+      <span class='badge text-bg-danger'>Prototype-based
+        inheritance</span>
+      <span class='badge text-bg-warning'>Asynchronous
+        programming with Promises and async/await</span>
+      <span class='badge text-bg-info'>Modules with
+        import/export statements</span>
+      <hr />
+      <h4>Libraries</h4>
+      <span class='badge text-bg-primary'>jQuery</span>
+      <span class='badge text-bg-secondary'>React</span>
+      <span class='badge text-bg-success'>Angular</span>
+      <span class='badge text-bg-danger'>Vue</span>
+      <span class='badge text-bg-warning'>Node.js</span>
+      <span class='badge text-bg-info'>Express.js</span>
+      <span class='badge text-bg-light'>Lodash</span>
+      <span class='badge text-bg-dark'>Moment.js</span>
+      <br />
+      <hr />
+      <h5>Tools</h5>
+      <span class='badge text-bg-primary'>Babel</span>
+      <span class='badge text-bg-secondary'>Webpack</span>
+      <span class='badge text-bg-success'>ESLint</span>
+      <span class='badge text-bg-danger'>Jest</span>
+      <span class='badge text-bg-warning'>Mocha</span>
+      <span class='badge text-bg-info'>Chai</span>
+      <span class='badge text-bg-light'>Selenium</span>
+      <span class='badge text-bg-dark'>Cypress</span>
+      <br />
+      <hr />
+      <br />
+      <div>
+        {{#each community}}
+          <button
+            type='button'
+            class='btn btn-link'
+          >{{name}}</button>
+          <button
+            type='button'
+            class='btn btn-link'
+          >{{type}}</button>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
