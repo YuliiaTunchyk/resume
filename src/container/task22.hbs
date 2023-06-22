@@ -1,0 +1,171 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  <section>
+    {{#with page_header}}
+	<div class='text-center'>
+      <h1>{{title}}</h1>
+      <p class='text-uppercase'>{{description}}</p>
+	  </div>
+    {{/with}}
+    <br />
+    <div class='card'>
+      <div class='card-body'>
+        {{#with section}}
+          {{#with about_us}}
+            {{#with title_list}}
+              <div
+                class='text-end'
+                class='display-6'
+                class='card-title'
+              >{{main}}</div>
+			  <br>
+              <h2
+                class='text-end'
+                class='card-text'
+              >{{sub}}</h2>
+            {{/with}}
+            <br />
+            {{#with button}}
+              <a
+                href='#'
+                class='btn btn-outline-info'
+              >{{text}}</a>
+            {{/with}}
+         	 {{/with}}
+     	 </div>
+		 </div>
+		<br>
+    	<div class='card'>
+      	<div class='card-body'>
+        {{#with advantage}}
+          <div
+            class='display-5'
+            class='card-title'
+          >{{title}}</div>
+		  <br>
+		  <div class='card'>
+      		<div class='card-body'>
+          {{#with efficiency}}
+              <div
+                class='display-4'
+                class='card-title'
+              >{{title}}</div>
+			  <br>
+              <h6
+                class='card-text'
+              >{{sub_title}}</h6>
+			  <br>
+			  <p
+                class='card-text'
+              >{{description}}</p>
+            	<br />
+              <a
+                href='#'
+                class="btn btn-outline-warning"
+              >{{button}}</a>
+            {{/with}}
+			</div>
+			</div>
+			<br>
+			<div class='card'>
+      		<div class='card-body'>
+			{{#with innovation}}
+			<div class='text-center'> 
+              <div
+                class='display-4'
+                class='card-title'
+              >{{title}}</div>
+			  <br>
+              <h6
+                class='card-text'
+              >{{sub_title}}</h6>
+			  <br>
+			  <p
+			   class='card-text'
+              >{{description}}</p>
+			  </div>
+            	<br />
+              <a
+                href='#'
+                class="btn btn-outline-warning"
+              >{{button}}</a>
+            {{/with}}
+			</div>
+			</div>
+			<br>
+			<div class='card'>
+      		<div class='card-body'>
+			{{#with collaboration}}
+			<div class='text-end'>
+              <div class='display-4'
+                class='card-title'
+              >{{title}}</div>
+			  <br>
+              <h6
+                class='card-text'
+              >{{sub_title}}</h6>
+			  <br>
+			  <p
+			   class='card-text'
+              >{{description}}</p>
+			  </div>
+            	<br />
+              <a
+                href='#'
+                class="btn btn-outline-warning"
+              >{{button}}</a>
+            {{/with}}
+			</div>
+			</div>
+          {{/with}}
+		  <br>
+		  </div>
+		  </div>
+		  <br>
+		  <div class='card'>
+      		<div class='card-body'>
+			{{#with agreement}}
+              <div class='display-5'
+                class='card-title'
+              >{{title}}</div>
+			  <br>
+			  {{#with info}}
+			  <div class='card'>
+      			<div class='card-body'>
+              <h5
+                class='card-title'
+              >{{sub_title}}</h5>
+			  <br>
+			  <div class='card'>
+      			<div class='card-body'>
+			  {{#with detail}}
+			  <p
+			   class='card-title'
+              >{{text}}</p>
+			  <br>
+			    <a
+                href='#'
+                class="btn btn-success" 				
+              >{{button}}</a>
+			  <br>
+			  </div>
+			  </div>
+			  {{/with}}
+			  {{/with}}
+			  </div>
+			  </div>
+            {{/with}}
+			</div>
+			</div>
+        {{/with}}
+  </section>
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
