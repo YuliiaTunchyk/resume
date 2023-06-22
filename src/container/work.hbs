@@ -3,20 +3,17 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div >
     {{#with main}}
 		<main>
-			<section>
+			<section class="ps-5">
 				{{> title data="Work history" big=true}}
-				<div>
+				<div class="mb-3">
 					<ul>
 						{{#each works}}
 						<li>
-							<div>{{position}}</div>
-
-							<br>
-
-							<div>
+							<div class="mb-3">{{position}}</div>
+							<div class="mb-3">
 								{{duration.from}} - 
 								{{#if duration.to}} 
 									{{duration.to}} 
@@ -24,38 +21,28 @@
 									(досі працюємо) 
 								{{/if}}
 							</div>
-
-							<br>
-
-							<div>
+							<div class="mb-5">
 								{{#if company.url}}
 									{{> link text=company.name href=company.url blank=true notLine=true}}
 								{{else}}
 								<b>{{company.name}}</b>
 								{{/if}}
 							</div>
-
-							<br>
-							<br>
-
-							<div>
+							<div class="mb-3">
 								<strong>Projects ({{projectAmount}})</strong>
 							</div>
-
-							<br>
-
 							<ul>
 								{{#each projects}}
 								<li>
-									<div>{{> link text=name href=url blank=true notLine=true}}</div>
-									<br>
-									<div><p>{{about}}</p></div>
-									<br>
-									<div>
+									<div class="mb-3">{{> link text=name href=url blank=true notLine=true}}</div>
+
+									<div class="mb-3"><p>{{about}}</p></div>
+
+									<div class="mb-3">
 										<em>Project stacks ({{stackAmount}})</em>
 									</div>
-									<br>
-									<div>
+	
+									<div class="mb-3">
 									<ul>
 										{{#each stacks}}
 										<li>
@@ -63,13 +50,11 @@
 										</li>
 										{{/each}}
 									</ul>
-									</div>
-									<br>
-									<div>
+									</div class="mb-3">
+									<div class="mb-3">
 										<em>Project awards ({{awardAmount}})</em>
 									</div>
-									<br>
-									<div>
+									<div class="mb-3">
 									<ul>
 										{{#each awards}}
 										<li>
@@ -82,7 +67,6 @@
 								{{/each}}
 							</ul>
 						</li>
-						<br>
 						{{/each}}
 					</ul>
 				</div>
