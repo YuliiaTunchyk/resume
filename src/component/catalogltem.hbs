@@ -1,0 +1,57 @@
+				{{#each goodsList}}
+        	<div class='col-4'>
+            <div class='card'>
+              <img
+                src={{img}}
+                class='card-img-top'
+                alt='...'
+              />
+              <div class='card-body'>
+                  {{#if isHot includeZero=true}}
+                    <span
+                      class='badge text-bg-warning rounded-pill'
+                    >{{isHot}}</span>
+                  {{/if}}
+                  {{#if isNew includeZero=true}}
+                    <span
+                      class='badge text-bg-primary rounded-pill'
+                    >{{isNew}}</span>
+                  {{/if}}
+                  {{#if isFast includeZero=true}}
+                    <span
+                      class='badge text-bg-success rounded-pill'
+                    >{{isFast}}</span>
+                  {{/if}}
+                  {{#if isFree includeZero=true}}
+                    <span
+                      class='badge text-bg-secondary rounded-pill'
+                    >{{isFree}}</span>
+                  {{/if}}
+                 <h5 class='card-title mt-2 mb-3'>{{name}} 
+                </h5>
+                {{#with review}}
+                <p class='card-text'>{{amount}} {{text}}</p>
+                {{/with}}
+                <h3>{{price}}</h3>
+                <p>{{delivery}}</p>
+                {{#each buttons}}
+                {{#if isPrimary includeZero=true}}
+                  <div class='mb-2'>
+                    <button
+                      type='button'
+                      class='btn btn-primary'
+                    >{{text}}</button>
+                  </div>
+                {{/if}}
+                {{#if isSecondary includeZero=true}}
+                  <button
+                    type='button'
+                    class='btn btn-secondary'
+                  >{{text}}</button>
+                {{/if}}
+              {{/each}}
+              {{#each characteristics}}
+              <ul class="list mt-3">
+              <li class="list-item">{{title}}: {{value}}</li>
+              </ul>
+					{{/each}}
