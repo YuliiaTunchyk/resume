@@ -1,0 +1,30 @@
+<div class='card pb-2'>
+  <div class='row'>
+    <div class='col-3 pt-4'>
+      <p class='card-title'>{{number}}</p>
+      <h5 class='card-text'>{{status}}</h5>
+    </div>
+    <div class='col-2 pt-4'>
+      {{#with amount}}
+        <p>{{title}}:</p>
+        <b>{{value}}</b>
+      {{/with}}
+    </div>
+    <div class='col-5 p-0 pt-3'>
+      {{#each images}}
+        <img src={{this}} />
+      {{/each}}
+    </div>
+    {{#with button}}
+      <div class='col-2 pt-3'>
+        {{#if isPrimary includeZero=true}}
+          <button
+            type='button'
+            class='btn btn-primary'
+            href={{link}}
+          >{{text}}</button>
+        {{/if}}
+      </div>
+    {{/with}}
+  </div>
+</div>
